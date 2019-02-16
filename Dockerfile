@@ -9,53 +9,53 @@ WORKDIR /tmp
 
 # --no-install-recommendsは付けないこと。
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
-  autoconf \
-  libtool \
-	cmake \
-	curl \
-	git \
-	xz-utils \
-	libatomic-ops-dev \
-	libunwind-dev \
-	g++ \
-	gdb \
-	libgflags-dev \
-	libsnappy-dev \
-	ninja-build \
-	python3 \
-	python3-ply
+ autoconf \
+ libtool \
+ cmake \
+ curl \
+ git \
+ xz-utils \
+ libatomic-ops-dev \
+ libunwind-dev \
+ g++ \
+ gdb \
+ libgflags-dev \
+ libsnappy-dev \
+ ninja-build \
+ python3 \
+ python3-ply
 
 # install boost
 RUN curl -o boost_1_64_0.tar.gz -SL https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz \
-  && tar -xzf boost_1_64_0.tar.gz \
-  && mkdir boost-build-1.64.0 \
-  && cd boost_1_64_0 \
-  && ./bootstrap.sh --prefix=/tmp/boost-build-1.64.0/ \
-  && ./b2 --prefix=/tmp/boost-build-1.64.0 -j 4 stage release \
-  && ./b2 install --prefix=/tmp/boost-build-1.64.0 \
-  && cd /tmp
+ && tar -xzf boost_1_64_0.tar.gz \
+ && mkdir boost-build-1.64.0 \
+ && cd boost_1_64_0 \
+ && ./bootstrap.sh --prefix=/tmp/boost-build-1.64.0/ \
+ && ./b2 --prefix=/tmp/boost-build-1.64.0 -j 4 stage release \
+ && ./b2 install --prefix=/tmp/boost-build-1.64.0 \
+ && cd /tmp
 
 # install google test
 RUN git clone https://github.com/google/googletest.git googletest.git \
-  && cd googletest.git/ \
-  && git checkout release-1.8.0 \
-  && mkdir _build \
-  && cd _build \
-  && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
-  && make \
-  && make install \
-  && cd /tmp
+ && cd googletest.git/ \
+ && git checkout release-1.8.0 \
+ && mkdir _build \
+ && cd _build \
+ && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
+ && make \
+ && make install \
+ && cd /tmp
 
 # install google benchmark
 RUN git clone https://github.com/google/benchmark.git google.benchmark.git \
-  && cd google.benchmark.git \
-  && git checkout v1.4.1 \
-  && mkdir _build \
-  && cd _build \
-  && cmake -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_GTEST_TESTS=OFF .. \
-  && make \
-  && make install \
-  && cd /tmp
+ && cd google.benchmark.git \
+ && git checkout v1.4.1 \
+ && mkdir _build \
+ && cd _build \
+ && cmake -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_GTEST_TESTS=OFF .. \
+ && make \
+ && make install \
+ && cd /tmp
 
 # install mongo c
 RUN git clone https://github.com/mongodb/mongo-c-driver.git mongo-c-driver.git \
