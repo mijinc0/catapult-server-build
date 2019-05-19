@@ -26,13 +26,13 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
  python3-ply
 
 # install boost
-RUN curl -o boost_1_64_0.tar.gz -SL https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz \
- && tar -xzf boost_1_64_0.tar.gz \
- && mkdir boost-build-1.64.0 \
- && cd boost_1_64_0 \
- && ./bootstrap.sh --prefix=/tmp/boost-build-1.64.0/ \
- && ./b2 --prefix=/tmp/boost-build-1.64.0 -j 4 stage release \
- && ./b2 install --prefix=/tmp/boost-build-1.64.0 \
+RUN curl -o boost_1_69_0.tar.gz -SL https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz \
+ && tar -xzf boost_1_69_0.tar.gz \
+ && mkdir boost-build-1.69.0 \
+ && cd boost_1_69_0 \
+ && ./bootstrap.sh --prefix=/tmp/boost-build-1.69.0/ \
+ && ./b2 --prefix=/tmp/boost-build-1.69.0 -j 4 stage release \
+ && ./b2 install --prefix=/tmp/boost-build-1.69.0 \
  && cd /tmp
 
 # install google test
@@ -75,7 +75,7 @@ RUN git clone https://github.com/mongodb/mongo-cxx-driver.git mongo-cxx-driver.g
  && sed -i 's/kvp("maxAwaitTimeMS", count)/kvp("maxAwaitTimeMS", static_cast<int64_t>(count))/' src/mongocxx/options/change_stream.cpp \
  && mkdir _build \
  && cd _build \
- && cmake -DLIBBSON_DIR=/usr/local -DBOOST_ROOT=/tmp/boost-build-1.64.0 -DLIBMONGOC_DIR=/usr/local -DBSONCXX_POLY_USE_BOOST=1 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. \
+ && cmake -DLIBBSON_DIR=/usr/local -DBOOST_ROOT=/tmp/boost-build-1.69.0 -DLIBMONGOC_DIR=/usr/local -DBSONCXX_POLY_USE_BOOST=1 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. \
  && make \
  && make install \
  && cd /tmp
@@ -102,6 +102,7 @@ RUN git clone https://github.com/zeromq/cppzmq.git cppzmq.git \
 # install rocks db
 RUN git clone https://github.com/facebook/rocksdb.git rocksdb.git \
  && cd rocksdb.git \
+ && git checkout -B "5.18.fb" "origin/5.18.fb" \
  && mkdir _build \
  && cd _build \
  && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local .. \
@@ -114,7 +115,7 @@ RUN git clone https://github.com/nemtech/catapult-server.git \
  && cd catapult-server \
  && mkdir _build \
  && cd _build \
- && cmake -DBOOST_ROOT=/tmp/boost-build-1.64.0 -DCMAKE_BUILD_TYPE=Release -G Ninja .. \
+ && cmake -DBOOST_ROOT=/tmp/boost-build-1.69.0 -DCMAKE_BUILD_TYPE=Release -G Ninja .. \
  && ninja publish \
  && ninja -j4 \
  && cd /tmp
