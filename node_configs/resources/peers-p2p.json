@@ -1,0 +1,82 @@
+{
+  "_info": "this file contains a list of peer_node peers",
+  "knownPeers": [
+    {
+      "publicKey": "E9130DFF4F806BD29DD93CB69BC65649A980EBEA79EA331361ABD86DA8480B3B",
+      "endpoint": {
+        "host": "13.114.200.132",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "peer-node-jp-5",
+        "roles": "Peer"
+      }
+    },
+    {
+      "publicKey": "DED04673CA14B48B431D328132124CE9597CE0C4CE9AAFB9994F258D0A948910",
+      "endpoint": {
+        "host": "40.90.163.78",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "peer-node-my-1",
+        "roles": "Peer"
+      }
+    },
+    {
+      "publicKey": "2DEB6FBBE59D5B5B211BA00724972AB288CBA206EE5282AE3C1DBF66184E2794",
+      "endpoint": {
+        "host": "52.194.207.217",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "peer-node-jp-6",
+        "roles": "Peer"
+      }
+    },
+    {
+      "publicKey": "C3CADFBD5CBB67C8743541C4F0EDF5A10EBE0B8913B4C91EBAD6030FDD82380D",
+      "endpoint": {
+        "host": "40.90.163.32",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "peer-node-my-2",
+        "roles": "Peer"
+      }
+    },
+    {
+      "publicKey": "184F6D7B7230A628EA498231EA506134193AEECAF67788E7E04FF71131D15EF4",
+      "endpoint": {
+        "host": "47.107.245.217",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "peer-node-cn-1",
+        "roles": "Peer"
+      }
+    },
+    {
+      "publicKey": "B58996557DCC4AB03B1FF3B7F1C5235CA0C766A8E540D4FC6DA95227329B8CDC",
+      "endpoint": {
+        "host": "18.228.92.190",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "peer-node-latam-1",
+        "roles": "Peer"
+      }
+    },
+    {
+      "publicKey": "",
+      "endpoint": {
+        "host": "",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "",
+        "roles": "Peer"
+      }
+    }
+  ]
+}

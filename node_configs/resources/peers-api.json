@@ -1,0 +1,71 @@
+{
+  "_info": "this file contains a list of api_node peers",
+  "knownPeers": [
+    {
+      "publicKey": "CFF94A88CD94AC9D9A3DA4716AB33988A54B22607F08FE90F3DA5DC6B93E8D84",
+      "endpoint": {
+        "host": "13.114.200.132",
+        "port": 7910
+      },
+      "metadata": {
+        "name": "api-node-jp-5",
+        "roles": "Api"
+      }
+    },
+    {
+      "publicKey": "07B1627A38DCEFB3D8FF5003B92D98CF4CBD098E4B7B9FEE4E20F2BBA1B575A6",
+      "endpoint": {
+        "host": "40.90.163.184",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "api-node-my-1",
+        "roles": "Api"
+      }
+    },
+    {
+      "publicKey": "E68C6706E8515262B87903481C6F18FB53120D3F68755A7BC1656FF7E6D46227",
+      "endpoint": {
+        "host": "52.194.207.217",
+        "port": 7910
+      },
+      "metadata": {
+        "name": "api-node-jp-6",
+        "roles": "Api"
+      }
+    },
+    {
+      "publicKey": "ACE668DA5E066D35CD5E5D5FF66A24EC48A3420C107CC02F3AF93141D19571D9",
+      "endpoint": {
+        "host": "47.107.245.217",
+        "port": 7910
+      },
+      "metadata": {
+        "name": "api-node-cn-1",
+        "roles": "Api"
+      }
+    },
+    {
+      "publicKey": "98D57ADB9C630179A52AEEEEB5E53A10955615103F6787E5FBCA4CE1CB8359F2",
+      "endpoint": {
+        "host": "18.228.92.190",
+        "port": 7910
+      },
+      "metadata": {
+        "name": "api-node-latam-1",
+        "roles": "Api"
+      }
+    },
+    {
+      "publicKey": "",
+      "endpoint": {
+        "host": "",
+        "port": 7910
+      },
+      "metadata": {
+        "name": "",
+        "roles": "Api"
+      }
+    }
+  ]
+}
