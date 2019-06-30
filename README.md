@@ -1,3 +1,9 @@
+**catapult server Githubリポジトリ**  
+https://github.com/nemtech/catapult-server　　
+
+**catapult serverのビルド手順**  
+https://github.com/nemtech/catapult-server/blob/master/BUILDING.md
+
 # catapult version
 
 `version : 0.5.0.1`
