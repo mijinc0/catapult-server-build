@@ -111,7 +111,7 @@ RUN git clone https://github.com/facebook/rocksdb.git rocksdb.git \
  && cd /tmp
 
 # build catapult
-RUN git clone https://github.com/nemtech/catapult-server.git \
+RUN git clone https://github.com/nemtech/catapult-server.git -b v0.6.0.1\
  && cd catapult-server \
  && mkdir _build \
  && cd _build \
