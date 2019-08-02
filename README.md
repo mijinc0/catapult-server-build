@@ -6,7 +6,7 @@ https://github.com/nemtech/catapult-server/blob/master/BUILDING.md
 
 # catapult version
 
-`version : 0.5.0.1`
+`version : 0.6.0.1`
 
 # Dockerイメージのビルド
 
