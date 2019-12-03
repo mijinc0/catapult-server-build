@@ -1,12 +1,12 @@
 **catapult server Githubリポジトリ**  
-https://github.com/nemtech/catapult-server　　
+https://github.com/nemtech/catapult-server
 
 **catapult serverのビルド手順**  
 https://github.com/nemtech/catapult-server/blob/master/BUILDING.md
 
 # catapult version
 
-`version : 0.6.0.1`
+`version : 0.9.0.1`
 
 # Dockerイメージのビルド
 
