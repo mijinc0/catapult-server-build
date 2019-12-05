@@ -53,16 +53,15 @@ $ ./catapult.server
 ```
 
 ### nemesis設定ファイルの書き換え
-9行目 nemesisGenerationHash = (address.txtから好きなものに)  
 
-10行目 nemesisSignerPrivateKey = (address.txtから好きなものに)
+nemesisGenerationHash = (address.txtから好きなものに)  
 
-18行目 cppFile =  
+nemesisSignerPrivateKey = (address.txtから好きなものに)
+
+cppFile =  
 ※削除
 
-46-68行目 いくつかのアドレスを生成したものに書き換える
-
-80-90行目 いくつかのアドレスを生成したものに書き換える
+4いくつかのアドレスを生成したものに書き換える
 
 ### モザイクIDの確認
 
@@ -92,25 +91,25 @@ $ ./catapult.server
 
 ### ネットワーク設定ファイルの書き換え
 
-4行目 publicKey = (nemesis設定ファイルの10行目の秘密鍵に対応する公開鍵)
+publicKey = (nemesis設定ファイルの10行目の秘密鍵に対応する公開鍵)
 
-5行目 generationHash = (nemesis設定ファイルの9行目と同じ値)
+generationHash = (nemesis設定ファイルの9行目と同じ値)
 
-12行目 currencyMosaicId = (上記で確認したモザイクID)
+currencyMosaicId = (上記で確認したモザイクID)
 
-13行目 harvestingMosaicId = (上記で確認したモザイクID)
+harvestingMosaicId = (上記で確認したモザイクID)
 
-26行目 initialCurrencyAtomicUnits = 8'999'999'998'000'000
-※ 少し値が違うので、nemesis瀬底ファイルにの`cat:currency`の総量合わせる
+initialCurrencyAtomicUnits = 8'999'999'998'000'000
+※ 少し値が違うことがあるので、nemesis瀬底ファイルにの`cat:currency`の総量合わせる
 
-29行目 totalChainImportance = 17'000'000
-※ 少し値が違うので、nemesis瀬底ファイルの`cat:harvest`の総量に合わせる
+totalChainImportance = 17'000'000
+※ 少し値が違うことがあるので、nemesis瀬底ファイルの`cat:harvest`の総量に合わせる
 
 ### ハーベスティング設定ファイルの書き換え
 
-4行目 harvestKey = (`cat:harvest`を保持するアドレスに対応する秘密鍵)
+harvestKey = (`cat:harvest`を保持するアドレスに対応する秘密鍵)
 
-5行目 isAutoHarvestingEnabled = true
+isAutoHarvestingEnabled = true
 
 # その他、設定でよく触るところ
 
