@@ -100,10 +100,10 @@ currencyMosaicId = (上記で確認したモザイクID)
 harvestingMosaicId = (上記で確認したモザイクID)
 
 initialCurrencyAtomicUnits = 8'999'999'998'000'000
-※ 少し値が違うことがあるので、nemesis瀬底ファイルにの`cat:currency`の総量合わせる
+※ 少し値が違うことがあるので、nemesisファイルの`cat:currency`の総量合わせる
 
 totalChainImportance = 17'000'000
-※ 少し値が違うことがあるので、nemesis瀬底ファイルの`cat:harvest`の総量に合わせる
+※ 少し値が違うことがあるので、nemesisファイルの`cat:harvest`の総量に合わせる
 
 ### ハーベスティング設定ファイルの書き換え
 
